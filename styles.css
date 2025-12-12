@@ -76,6 +76,24 @@ body {
     margin: 0;
 }
 
+.logo h6 {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    color: var(--primary-color);
+    margin: 0;
+    line-height: 1;
+    font-weight: 400;
+    opacity: 0.95;
+    padding-left: 140px;
+}
+
+.logo-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0; /* no gap so h6 sits directly under h1 */
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
