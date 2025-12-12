@@ -1,0 +1,458 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Healthy Space 2.0 - Fine Dining Restaurant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="logo2.jpg" alt="The Healthy Space 2.0 Logo" class="logo-img">
+                    <h1>The Healthy Space 2.0</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#menu" class="nav-link">Menu</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#games" class="nav-link">Games</a></li>
+                    <li><a href="#order" class="nav-link">Order Now</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1 class="hero-title">The Healthy Space 2.0</h1>
+            <p class="hero-subtitle">Where Flavor Meets Wellness</p>
+            <p class="hero-description">Experience a culinary journey that nourishes your body and soul</p>
+            <div class="hero-buttons">
+                <a href="#menu" class="btn btn-primary">View Menu</a>
+                <a href="#order" class="btn btn-secondary">Order Now</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span></span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Story</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image-left">
+                    <!-- <img src="about-left.jpg" alt="About Us Left" class="about-img"> -->
+                    <!-- <p class="image-name">Name 1</p> -->
+                </div>
+                <div class="about-text">
+                    <p class="lead">The Healthy Space 2.0 — Kothri Kalan's premium food & leisure destination.</p>
+
+                    <p>It began as a single restaurant built with passion and high standards.
+
+                        One dream grew into a partnership focused on excellence.
+
+                        We expanded our vision beyond just dining.
+                        Now, we offer gourmet food along with turf, snooker, and badminton.
+                        Luxury here is not only tasted — it's experienced.</p>
+
+                    <p>Welcome to The Healthy Space 2.0: Eat. Play. Live Premium.</p>
+
+
+                    <div class="features">
+                        <div class="feature">
+                            <h3>Farm Fresh</h3>
+                            <p>Locally sourced ingredients</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Chef's Craft</h3>
+                            <p>Expertly prepared dishes</p>
+                        </div>
+                        <div class="feature">
+                            <h3>Sustainable</h3>
+                            <p>Eco-friendly practices</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image-right">
+                    <!-- <img src="about-right.jpg" alt="About Us Right" class="about-img"> -->
+                    <p class="image-name">Name 2</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Our Menu</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Search and select items from our menu in the order section below</p>
+            </div>
+            <div class="menu-note">
+                <p>💡 <strong>How to order:</strong> Go to the "Order Now" section below and search for items by name.
+                    All items are available through the search feature.</p>
+                <p style="margin-top: 1rem;">We offer Chinese dishes, Vegetable curries, Rice items, Thalis, Parathas,
+                    Sandwiches, Beverages, Pizzas, and Snacks.</p>
+            </div>
+            <!-- Menu grid is hidden - items are used for search/autocomplete but not displayed -->
+            <div class="menu-grid" id="menu-grid" style="display: none;">
+                <!-- Menu items are loaded in background for search functionality -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order" class="order">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Place Your Order</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Fill in your details and we'll prepare your delicious meal</p>
+            </div>
+            <div class="order-content">
+                <div class="order-form-wrapper">
+                    <form id="order-form" class="order-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="customer-name">Name *</label>
+                                <input type="text" id="customer-name" name="name" placeholder="Your Full Name" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="customer-phone">Mobile Number *</label>
+                                <input type="tel" id="customer-phone" name="phone" placeholder="10-digit mobile number"
+                                    pattern="[0-9]{10}" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="customer-address">Delivery Address *</label>
+                            <textarea id="customer-address" name="address"
+                                placeholder="Enter your complete delivery address" rows="3" required></textarea>
+                        </div>
+                        <div class="form-group">
+                            <label for="item-search">Search and Add Items *</label>
+                            <div class="search-container">
+                                <input type="text" id="item-search" name="item-search"
+                                    placeholder="Type item name to search (e.g., Hakka Noodles)" autocomplete="off">
+                                <div class="autocomplete-suggestions" id="autocomplete-suggestions"></div>
+                            </div>
+                            <small class="form-hint">Start typing item name and select from suggestions. Items will be
+                                added to your cart.</small>
+                        </div>
+                        <div class="order-cart" id="order-cart">
+                            <h3>Your Order</h3>
+                            <div class="cart-items" id="cart-items">
+                                <p class="empty-cart">No items added yet. Search and add items above.</p>
+                            </div>
+                            <div class="cart-total" id="cart-total" style="display: none;">
+                                <div class="total-row">
+                                    <span>Total Items:</span>
+                                    <span id="total-quantity">0</span>
+                                </div>
+                                <div class="total-row total-amount-row">
+                                    <strong>Total Bill:</strong>
+                                    <strong>₹<span id="total-amount">0</span></strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-message" id="order-message"></div>
+                        <button type="submit" class="btn btn-primary btn-order">
+                            <span class="btn-text">Order Now via WhatsApp</span>
+                            <span class="btn-icon">📱</span>
+                        </button>
+                    </form>
+                </div>
+                <div class="order-help">
+                    <h3>How to Order</h3>
+                    <ol>
+                        <li>Enter your name and mobile number</li>
+                        <li>Provide your delivery address</li>
+                        <li>Search for items by typing in the search box</li>
+                        <li>Select items from suggestions to add to cart</li>
+                        <li>Adjust quantities as needed</li>
+                        <li>Click "Order Now via WhatsApp" to confirm</li>
+                    </ol>
+                    <div class="help-note">
+                        <p><strong>Note:</strong> Only items from our menu will be added to your order. You can modify
+                            quantities or remove items from the cart.</p>
+                    </div>
+                    <div class="quick-menu-link">
+                        <a href="#menu" class="btn btn-secondary">View Full Menu</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section -->
+    <section id="gallery" class="gallery">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Gallery</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">A glimpse into our culinary creations</p>
+            </div>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Original Cards -->
+                    <div class="card">
+                        <video autoplay loop muted playsinline webkit-playsinline>
+                            <source src="1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="card">
+                        <img src="chairs.jpg" alt="Chef's Special">
+                    </div>
+                    <div class="card">
+                        <img src="cafewithleg.jpg" alt="Artisan Plating">
+                    </div>
+                    <div class="card">
+                        <img src="innerchair.jpg" alt="Healthy Bowls">
+                    </div>
+
+                    <!-- Duplicated Cards for Infinite Loop -->
+                    <div class="card">
+                        <video autoplay loop muted playsinline webkit-playsinline>
+                            <source src="1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="card">
+                        <img src="chairs.jpg" alt="Chef's Special">
+                    </div>
+                    <div class="card">
+                        <img src="cafewithleg.jpg" alt="Artisan Plating">
+                    </div>
+                    <div class="card">
+                        <img src="innerchair.jpg" alt="Healthy Bowls">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="games">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Sports Hub</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">Have fun while you wait for your order</p>
+            </div>
+            <div class="marquee-wrapper">
+                <div class="marquee-track">
+                    <!-- Original Cards -->
+                    <div class="game-card">
+                        <video autoplay loop muted playsinline webkit-playsinline class="game-image">
+                            <source src="turfVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Turf</h3>
+                        <p>Enjoy playing on our premium turf ground</p>
+                    </div>
+                    <div class="game-card">
+                        <img src="Snooker.jpg" alt="Snooker" class="game-image">
+                        <h3>Snooker</h3>
+                        <p>Challenge your friends to a game of snooker</p>
+                    </div>
+                    <div class="game-card">
+                        <img src="Badminton.avif" alt="Badminton" class="game-image">
+                        <h3>Badminton</h3>
+                        <p>Play badminton and stay active</p>
+                    </div>
+
+                    <!-- Duplicated Cards for Infinite Loop -->
+                    <div class="game-card">
+                        <video autoplay loop muted playsinline webkit-playsinline class="game-image">
+                            <source src="turfVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Turf</h3>
+                        <p>Enjoy playing on our premium turf ground</p>
+                    </div>
+                    <div class="game-card">
+                        <img src="Snooker.jpg" alt="Snooker" class="game-image">
+                        <h3>Snooker</h3>
+                        <p>Challenge your friends to a game of snooker</p>
+                    </div>
+                    <div class="game-card">
+                        <img src="Badminton.avif" alt="Badminton" class="game-image">
+                        <h3>Badminton</h3>
+                        <p>Play badminton and stay active</p>
+                    </div>
+
+                    <!-- Extra Duplication for smoother loop if needed -->
+                    <div class="game-card">
+                        <video autoplay loop muted playsinline webkit-playsinline class="game-image">
+                            <source src="turfVideo.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <h3>Turf</h3>
+                        <p>Enjoy playing on our premium turf ground</p>
+                    </div>
+                    <div class="game-card">
+                        <img src="Snooker.jpg" alt="Snooker" class="game-image">
+                        <h3>Snooker</h3>
+                        <p>Challenge your friends to a game of snooker</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+                <p class="section-subtitle">We'd love to hear from you</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="info-item">
+                        <h3>Location</h3>
+                        <!-- <p>3RCV+Q82, Kothri Kalan, Kothri, Madhya Pradesh 466114</p> -->
+                        <a href=https://maps.app.goo.gl/VvQ3Q2F25iS86fuUA style="text-decoration: none
+                         ; color: black;">3RCV+Q82, Kothri Kalan, Kothri, Madhya Pradesh 466114</a>
+                    </div>
+                    <div class="info-item">
+                        <h3>Hours</h3>
+                        <p>Monday - Friday: 9:00 AM - 12:00 PM<br>
+                            Saturday - Sunday: 10:00 AM - 11:00 PM</p>
+                    </div>
+                    <div class="info-item">
+                        <h3>Contact</h3>
+                        <!-- <p>Phone: (+91) 8171180744<br> -->
+                        <p> <a href="918171180744">Phone: (+91) 8171180744</a>
+                            <!-- Email: info@thehealthyspace2.com</p> --><br>
+                            <a href="info@thehealthyspace2.com">Email: info@thehealthyspace2.com</a>
+                        </p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="reservation-form">
+                        <div class="form-group">
+                            <input type="text" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" name="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Select Option *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="option" value="dine" required>
+                                    <span>Dine Table</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="option" value="games" required>
+                                    <span>Games</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group" id="games-options" style="display: none;">
+                            <label>Select Game *</label>
+                            <div class="radio-group">
+                                <label class="radio-label">
+                                    <input type="radio" name="game" value="turf">
+                                    <span>Turf</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="game" value="snooker">
+                                    <span>Snooker</span>
+                                </label>
+                                <label class="radio-label">
+                                    <input type="radio" name="game" value="badminton">
+                                    <span>Badminton</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="date" name="date" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="time" name="time" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" name="guests" placeholder="Number of Guests" min="1" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea name="requests" placeholder="Special Requests" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>The Healthy Space 2.0</h3>
+                    <p>Where flavor meets wellness. Experience the perfect blend of taste and health.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="#gallery">Gallery</a></li>
+                        <li><a href="#games">Games</a></li>
+                        <li><a href="#order">Order Now</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#">Facebook</a>
+                        <a href="https://www.instagram.com/thehealthyspace2.0/">Instagram</a>
+                        <a href="#">Twitter</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 The Healthy Space 2.0. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="menuData.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
