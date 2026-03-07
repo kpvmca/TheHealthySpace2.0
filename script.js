@@ -177,7 +177,7 @@ if (reservationForm) {
             messageText += `*Special Requests:* ${data.requests}\n`;
         }
 
-        const waNumber = '916262266191';
+        const waNumber = '918171180744';
 
         const encodedMessage = encodeURIComponent(messageText);
         const whatsappUrl = `https://wa.me/${waNumber}?text=${encodedMessage}`;
