@@ -238,7 +238,7 @@ const totalQuantity = document.getElementById('total-quantity');
 const orderMessage = document.getElementById('order-message');
 
 // WhatsApp phone number (update with your restaurant's WhatsApp number)
-const whatsappNumber = '916262266191'; // Replace with actual WhatsApp number (format: country code + number without +)
+const whatsappNumber = '918171180744'; // Replace with actual WhatsApp number (format: country code + number without +)
 
 // Cart to store selected items
 let cart = [];
